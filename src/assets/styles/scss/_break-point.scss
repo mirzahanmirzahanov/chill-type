@@ -1,0 +1,19 @@
+$bp-super-small: 320px;
+$bp-small-medium: 414px;
+$bp-small: 599px;
+$bp-medium: 899px;
+$bp-medium-big: 1100px;
+$bp-big: 1366px;
+$bp-super-big: 1919px;
+
+@mixin mq($from, $to: false) {
+  @if $to {
+    @media (min-width: #{$from + 1}) and (max-width: #{$to}) {
+      @content;
+    }
+  } @else {
+    @media (min-width: #{$from + 1}) {
+      @content;
+    }
+  }
+}

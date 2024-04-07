@@ -1,0 +1,176 @@
+@mixin overflow-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin defaultStyleTitle {
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: -0.1px;
+}
+
+@mixin h1 {
+  @include defaultStyleTitle;
+
+  font-size: 36px;
+  line-height: 48px;
+}
+
+@mixin h2 {
+  @include defaultStyleTitle;
+
+  font-size: 28px;
+  line-height: 36px;
+}
+
+@mixin h3 {
+  @include defaultStyleTitle;
+
+  font-size: 22px;
+  line-height: 32px;
+}
+
+@mixin h4 {
+  @include defaultStyleTitle;
+
+  font-size: 18px;
+  line-height: 27px;
+}
+
+@mixin h5 {
+  @include defaultStyleTitle;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+}
+
+@mixin disclaimer {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 11px;
+  letter-spacing: -0.1px;
+}
+
+@mixin label_small {
+  @include label;
+
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@mixin text {
+  font-style: normal;
+}
+
+@mixin text_big {
+  @include text;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin text_big_medium {
+  @include text_big;
+
+  font-weight: 500;
+}
+
+@mixin text_big_bold {
+  @include text_big;
+
+  font-weight: 700;
+}
+
+@mixin text_big_regular {
+  @include text_big;
+
+  font-weight: normal;
+}
+
+@mixin text_big_light {
+  @include text_big;
+
+  font-weight: 300;
+}
+
+@mixin text_medium {
+  @include text;
+
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.1px;
+}
+
+@mixin text_medium_bold {
+  @include text_medium;
+
+  font-weight: bold;
+}
+
+@mixin text_medium_regular {
+  @include text_medium;
+
+  font-weight: normal;
+}
+
+
+@mixin text_medium_light {
+  @include text_medium;
+
+  font-weight: 300;
+}
+
+@mixin text_medium_small {
+  @include text_medium;
+
+  font-weight: 500;
+  line-height: 18px;
+}
+
+@mixin text_medium_big {
+  @include text_medium;
+
+  font-weight: 500;
+}
+
+@mixin text_small {
+  @include text;
+
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+}
+
+@mixin text_small_regular {
+  @include text_small;
+
+  font-weight: normal;
+}
+
+@mixin text_small_bold {
+  @include text_small;
+
+  font-weight: bold;
+}
+
+@mixin text_small_medium {
+  @include text_small;
+
+  font-weight: 500;
+}
+
+@mixin text_small_super {
+  @include text_small;
+
+  line-height: 14px;
+}
+
