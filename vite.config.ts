@@ -14,16 +14,6 @@ export default defineConfig({
   },
   css: {
     preprocessorOptions: {
-      // scss: {
-      //   additionalData: `
-      //     @import "@/assets/styles/css/_reset.css";
-      //     @import "@/assets/styles/css/_global.css";
-      //     @import "@/assets/styles/scss/_fonts.scss";
-      //     @import "@/assets/styles/css/_colors.css";
-      //     `
-      //     // @import "@/assets/styles/scss/_break-point.scss";
-      //     // @import "@/assets/styles/scss/_fonts.scss";
-      // }
       scss: {
         additionalData: '@use "@/assets/styles/scss/index.scss" as *;'
       }

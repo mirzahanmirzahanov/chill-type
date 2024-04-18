@@ -10,6 +10,16 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  transition: 0.2s linear !important;
+  background: #fff;
+}
+
+.dark {
+  background: var(--black);
+  color: var(--grayLight);
+}
+
 button {
   touch-action: manipulation;
 }
@@ -43,7 +53,6 @@ input[type='numbr'] {
   -moz-appearance: textfield;
 }
 
-
 // Правило для отключения зума при наведении у IOS
 @media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024px) {
   select,
@@ -52,7 +61,7 @@ input[type='numbr'] {
     font-size: 16px;
   }
 }
-@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024px) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-device-width: 1024px) {
   select:focus,
   textarea:focus,
   input:focus {
@@ -60,7 +69,7 @@ input[type='numbr'] {
   }
 }
 
- /* серая заглушка для сломанных изображенний */
+/* серая заглушка для сломанных изображенний */
 /* img {
   &::after {
     content: '';

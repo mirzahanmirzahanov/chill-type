@@ -122,7 +122,7 @@ Set the default cursor for buttons.
 */
 
 button,
-[role="button"] {
+[role='button'] {
   cursor: pointer;
 }
 
@@ -132,7 +132,7 @@ button:focus {
 }
 
 /* убираем у инпута верхнюю тень на ios */
-input:not([type="checkbox"], [type="radio"]),
+input:not([type='checkbox'], [type='radio']),
 textarea,
 select {
   appearance: none;
@@ -235,7 +235,6 @@ table {
   border-color: inherit; /* 2 */
 }
 
-
 /*
 Use the modern Firefox focus style for all focusable elements.
 */
@@ -274,7 +273,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type="search"] {
+[type='search'] {
   appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
