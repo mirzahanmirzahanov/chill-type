@@ -13,9 +13,10 @@ html {
 body {
   transition: 0.2s linear !important;
   background: #fff;
+  // color: var(--black);
 }
 
-.dark {
+body.dark {
   background: var(--black);
   color: var(--grayLight);
 }
@@ -54,7 +55,7 @@ input[type='numbr'] {
 }
 
 // Правило для отключения зума при наведении у IOS
-@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024px) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-device-width: 1024px) {
   select,
   textarea,
   input {
