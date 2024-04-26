@@ -2,12 +2,13 @@
 import './styles/index.scss'
 
 import { DefaultLayout } from '@/shared/ui/layouts'
+import { Header } from '@/widgets/header'
 </script>
 
 <template>
   <DefaultLayout>
     <template v-slot:header>
-      <header />
+      <Header />
     </template>
     <template v-slot:default>
       <RouterView />
