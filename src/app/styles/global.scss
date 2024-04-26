@@ -2,7 +2,6 @@ html {
   box-sizing: border-box;
   overflow-x: hidden;
   font-family: 'Fira Code', sans-serif;
-  color: var(--black);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -10,15 +9,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  transition: 0.2s linear !important;
-  background: #fff;
-  // color: var(--black);
-}
-
-body.dark {
-  background: var(--black);
-  color: var(--grayLight);
+#app {
+  min-height: 100vh;
+  height: 100%;
+  transition: var(--base-tr) !important;
+  background: var(--body-color);
+  color: var(--text-color);
 }
 
 button {
@@ -28,13 +24,15 @@ button {
 ::-webkit-scrollbar-thumb {
   width: 3px;
   height: 3px;
-  background-color: var(--grayDark);
+  background-color: var(--body-color);
+  transition: var(--base-tr);
 }
 
 ::-webkit-scrollbar-track {
   width: 3px;
   height: 3px;
-  background-color: transparent;
+  background-color: var(--text-color);
+  transition: var(--base-tr);
 }
 
 ::-webkit-scrollbar {

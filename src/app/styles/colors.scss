@@ -1,10 +1,8 @@
 :root {
   --black: #0d0a19;
   --blackLight: #474450;
-  --blackLight-rgba: 71, 68, 80;
   --orange: #ce5508;
   --orange-light: #ffdad2;
-  --orange-rgba: 206, 85, 8;
   --green-light: #dcf1d7;
   --green: #568d49;
   --grayDark: #9a9ea7;
@@ -14,16 +12,32 @@
   --grayDolphin: #6d6a77;
   --beige: #eeece6;
   --error: #ff8181;
-  --error-rgba: 255, 181, 165;
   --valid: #6cb75a;
   --neonBlue: #3abdd5;
-  --neonBlue-rgba: 37, 84, 255;
   --royalBlue: #5fc8db;
   --marineBlue: #2aa1b7;
-  --marineBlue-rgba: 42, 161, 183;
   --grayBlue: #334580;
   --grayBlueDark: #293766;
   --gold: #fc0;
   --background-color-skeleton: #e7e7e7;
   --background-color-skeleton-gradient: #fff;
+}
+
+:root {
+  // colors
+  --body-color: #d0c9d6;
+  --bg-color: #3f3356;
+  --text-color: #1a051d;
+  --name-color: #d0c9d6;
+  // transitions
+  --base-tr: 0.2s linear;
+  // visual styles
+  --base-b-radius: 5px;
+}
+
+#app.dark {
+  // colors
+  --body-color: #1a051d;
+  --bg-color: #3f3356;
+  --text-color: #d0c9d6;
 }
