@@ -1,6 +1,11 @@
+<script setup lang="ts">
+import { ThemeSwitcher } from '@/features/theme-switcher'
+</script>
+
 <template>
   <header class="header">
     <p class="header__title">ChillType</p>
+    <ThemeSwitcher />
   </header>
 </template>
 
