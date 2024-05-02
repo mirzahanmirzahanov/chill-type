@@ -3,9 +3,10 @@ import { ref, computed } from 'vue'
 import { useDark, useToggle } from '@vueuse/core'
 
 import { BaseButton } from '@/shared/ui/buttons'
+import { BaseIcon } from '@/entities/Icon'
 
 const isDark = ref(useDark())
-const themeTitle = computed((): string => (isDark.value ? 'dark' : 'light'))
+const iconName = computed(() => (isDark.value ? 'MoonIcon' : 'SunIcon'))
 
 const theme = useDark({
   selector: 'div#app',
@@ -17,7 +18,7 @@ const toggleTheme = useToggle(theme)
 
 <template>
   <BaseButton class="theme-switcher" @click="toggleTheme()">
-    {{ themeTitle }}
+    <BaseIcon :name="iconName" />
   </BaseButton>
 </template>
 

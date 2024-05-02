@@ -9,6 +9,7 @@
     "baseUrl": ".",
     "target": "ES6",
     "module": "ESNext",
+    "moduleResolution": "Node",
     "paths": {
       "@/*": ["./src/*"]
     }
