@@ -1,25 +1,37 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import { useDark, useToggle } from '@vueuse/core'
+import { computed } from 'vue'
+import type { Component, ComputedRef } from 'vue'
+import { isDark, toggleTheme } from '@/entities/theme'
 
 import { BaseButton } from '@/shared/ui/buttons'
-import { BaseIcon } from '@/entities/Icon'
+import { SunIcon, MoonIcon } from '@/shared/ui/icons'
 
-const isDark = ref(useDark())
-const iconName = computed(() => (isDark.value ? 'MoonIcon' : 'SunIcon'))
+const icons: Record<string, Component> = {
+  SunIcon,
+  MoonIcon
+}
 
-const theme = useDark({
-  selector: 'div#app',
-  attribute: 'class',
-  valueDark: 'dark'
-})
-const toggleTheme = useToggle(theme)
+const iconName: ComputedRef = computed((): string => (isDark.value ? 'MoonIcon' : 'SunIcon'))
+
+const currentThemeIcon: ComputedRef<Component> = computed(() => icons[iconName.value])
 </script>
 
 <template>
   <BaseButton class="theme-switcher" @click="toggleTheme()">
-    <BaseIcon :name="iconName" />
+    <Transition name="fade" mode="out-in">
+      <component :is="currentThemeIcon" />
+    </Transition>
   </BaseButton>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--base-tr);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
