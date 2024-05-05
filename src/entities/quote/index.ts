@@ -1,0 +1,1 @@
+export { fetchQuote } from './api'

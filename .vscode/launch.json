@@ -9,7 +9,7 @@
       "type": "chrome",
       "request": "launch",
       "name": "Debug Vite App",
-      "url": "https://localhost:5174",
+      "url": "http://localhost:5174",
       "webRoot": "${workspaceFolder}/src",
       // "enableContentValidation": false,
       "sourceMapPathOverrides": {
