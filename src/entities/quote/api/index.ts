@@ -1,26 +1,17 @@
 import { http } from '@/shared/api'
-interface Quote {
-  quote?: String
+interface Params {
+  headers?: any
+  query?: any
+  body?: any
 }
-export const fetchQuote = async (endpoint: string = '', params: object = {}) => {
-  let requestData: Quote | null = null
-  let error: Promise<object> | null = null
-  let status: 'pending' | 'resolved' | 'rejected' = 'pending'
+export const fetchQuote = async (endpoint: string = '', params?: Params) => {
+  const queryString = new URLSearchParams(params?.query).toString()
+  const fullUrl = `${endpoint}?${queryString}`
 
-  try {
-    const { data } = await http(
-      import.meta.env.VITE_QUOTE_API_URL,
-      import.meta.env.VITE_QUOTE_API_KEY
-    ).get(endpoint, {
-      params: params
-    })
-
-    requestData = data[0]
-    status = 'resolved'
-  } catch (e) {
-    status = 'rejected'
-    error = Promise.reject(e)
-  }
-
-  return { requestData, status, error }
+  const { isFetching, error, data } = await http(fullUrl, {
+    // headers: params?.headers,
+    // query: params?.query,
+    body: params?.body
+  }).json()
+  return { isFetching, error, data }
 }

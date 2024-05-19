@@ -5,12 +5,12 @@ useTitle('ChillType - home')
 import { fetchQuote } from '@/entities/quote'
 import { TextField } from '@/features/text-field'
 
-const { requestData } = await fetchQuote()
+const { data } = await fetchQuote()
 </script>
 
 <template>
   <div class="main">
-    <TextField :text="requestData?.quote" />
+    <TextField :text="data[0].quote" />
     <p class="main-text">sdfsdf</p>
   </div>
 </template>

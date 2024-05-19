@@ -5,7 +5,7 @@ defineProps({
 </script>
 
 <template>
-  <input type="text" name="" id="textField">
+  <input type="text" name="" id="textField" />
   <label for="textField">{{ text }}</label>
 </template>
 

@@ -2,7 +2,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--text-color);
-  transition: var(--base-tr);
+  transition: var(--base-tr) !important;
 }
 
 @mixin defaultStyleTitle {
@@ -10,7 +10,7 @@
   font-weight: bold;
   letter-spacing: -0.1px;
   color: var(--text-color);
-  transition: var(--base-tr);
+  transition: var(--base-tr) !important;
 }
 
 @mixin h1 {
@@ -55,7 +55,7 @@
   line-height: 24px;
   letter-spacing: -0.1px;
   color: var(--text-color);
-  transition: var(--base-tr);
+  transition: var(--base-tr) !important;
 }
 
 @mixin disclaimer {
@@ -65,7 +65,7 @@
   line-height: 11px;
   letter-spacing: -0.1px;
   color: var(--text-color);
-  transition: var(--base-tr);
+  transition: var(--base-tr) !important;
 }
 
 @mixin label_small {
@@ -77,7 +77,7 @@
 
 @mixin text {
   font-style: normal;
-  transition: var(--base-tr);
+  transition: var(--base-tr) !important;
   color: var(--text-color);
 }
 
