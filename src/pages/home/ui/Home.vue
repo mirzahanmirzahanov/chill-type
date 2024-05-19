@@ -3,14 +3,16 @@ import { useTitle } from '@vueuse/core'
 useTitle('ChillType - home')
 
 import { fetchQuote } from '@/entities/quote'
+import { TextField } from '@/features/text-field'
 
-const { requestData, status } = await fetchQuote('')
-
-console.log(requestData, status)
+const { requestData } = await fetchQuote()
 </script>
 
 <template>
-  <div class="main"></div>
+  <div class="main">
+    <TextField :text="requestData?.quote" />
+    <p class="main-text">sdfsdf</p>
+  </div>
 </template>
 
 <style lang="scss" scoped>

@@ -2,7 +2,9 @@
   <div class="default-layout">
     <slot name="header"></slot>
     <main class="default-layout__main">
-      <slot></slot>
+      <Suspense>
+        <slot></slot>
+      </Suspense>
     </main>
     <slot name="footer"></slot>
   </div>

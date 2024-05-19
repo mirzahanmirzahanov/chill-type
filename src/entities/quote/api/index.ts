@@ -1,9 +1,11 @@
 import { http } from '@/shared/api'
-
+interface Quote {
+  quote?: String
+}
 export const fetchQuote = async (endpoint: string = '', params: object = {}) => {
-  let requestData: object | null = null
+  let requestData: Quote | null = null
   let error: Promise<object> | null = null
-  let status: string = 'pending'
+  let status: 'pending' | 'resolved' | 'rejected' = 'pending'
 
   try {
     const { data } = await http(
