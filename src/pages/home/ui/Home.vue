@@ -10,8 +10,7 @@ const { data } = await fetchQuote()
 
 <template>
   <div class="main">
-    <TextField :text="data[0].quote" />
-    <p class="main-text">sdfsdf</p>
+    <TextField :quote="data.quote" />
   </div>
 </template>
 
