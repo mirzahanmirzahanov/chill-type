@@ -11,13 +11,9 @@ const icons: Record<string, Component> = {
   MoonIcon
 }
 
-const iconName: ComputedRef = computed((): string =>
-  isDark.value ? 'MoonIcon' : 'SunIcon'
-)
+const iconName: ComputedRef = computed((): string => (isDark.value ? 'MoonIcon' : 'SunIcon'))
 
-const currentThemeIcon: ComputedRef<Component> = computed(
-  () => icons[iconName.value]
-)
+const currentThemeIcon: ComputedRef<Component> = computed(() => icons[iconName.value])
 </script>
 
 <template>

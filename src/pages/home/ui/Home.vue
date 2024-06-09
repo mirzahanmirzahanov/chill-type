@@ -14,10 +14,4 @@ const { data } = await fetchQuote()
   </div>
 </template>
 
-<style lang="scss" scoped>
-.main {
-  &-text {
-    @include text_big;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

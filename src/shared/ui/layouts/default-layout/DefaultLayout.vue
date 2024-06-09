@@ -18,6 +18,9 @@
   min-height: 100vh;
   &__main {
     flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>

@@ -11,7 +11,8 @@
   --grayWater: #c8ccd4;
   --grayDolphin: #6d6a77;
   --beige: #eeece6;
-  --error: #ff8181;
+  --error-color: #ff8181;
+  --extra-letter-color: #914a4a;
   --valid: #6cb75a;
   --neonBlue: #3abdd5;
   --royalBlue: #5fc8db;
@@ -31,6 +32,7 @@
   --name-color: #d0c9d6;
   // transitions
   --base-tr: 0.3s linear;
+  --fast-tr: 0.1s linear;
   // visual styles
   --base-b-radius: 5px;
 }

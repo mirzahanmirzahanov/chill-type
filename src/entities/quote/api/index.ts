@@ -4,10 +4,7 @@ interface Params {
   query?: any
   body?: any
 }
-export const fetchQuote = async (
-  endpoint: string = '',
-  params?: Params
-) => {
+export const fetchQuote = async (endpoint: string = '', params?: Params) => {
   const queryString = new URLSearchParams(params?.query).toString()
   const fullUrl = `${endpoint}${queryString ? '?' + queryString : ''}`
 
